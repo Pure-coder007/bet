@@ -315,31 +315,50 @@
             color: transparent;
             text-shadow: 0 0 8px rgba(255, 215, 0, 0.4);
         }
-
+        
+        .hub-tab {
+            border: 1px solid rgba(244, 197, 66, 0.22);
+            background: rgba(10, 18, 30, 0.78);
+            color: #d1d5db;
+            transition: all 0.25s ease;
+        }
+        
+        .hub-tab.active {
+            background: linear-gradient(105deg, rgba(255, 230, 134, 0.18), rgba(244, 197, 66, 0.28));
+            border-color: rgba(244, 197, 66, 0.8);
+            color: #fff5c3;
+            box-shadow: 0 14px 30px -18px rgba(244, 197, 66, 0.6);
+        }
+        
+        .hub-panel[hidden] {
+            display: none;
+        }
+        
+        .prediction-pill,
+        .score-badge {
+            border: 1px solid rgba(244, 197, 66, 0.25);
+            background: rgba(244, 197, 66, 0.08);
+        }
+        
         @media (max-width: 640px) {
             #particleContainer,
             .hero-orb {
                 display: none;
             }
-
             .video-overlay {
                 min-height: 160px;
                 padding: 1rem;
             }
-
             .play-icon {
                 font-size: 2.25rem;
             }
-
             .casino-border::before {
                 filter: blur(8px);
                 opacity: 0.35;
             }
-
             #fullscreenVideoModal .relative {
                 margin-inline: 0.75rem;
             }
-
             #fullscreenVideoModal button {
                 top: -2.5rem;
                 font-size: 1.125rem;
@@ -354,27 +373,24 @@
             background: #03070F;
         }
         
-        ::-webkit-scrollbar-thumb {
+         ::-webkit-scrollbar-thumb {
             background: linear-gradient(135deg, #F4C542, #FFD700);
             border-radius: 10px;
         }
-
+        
         @media (max-width: 767px) {
             body {
                 font-size: 14px;
             }
-
             #particleContainer {
                 display: none;
             }
-
             .hero-orb {
                 width: 11rem;
                 height: 11rem;
                 top: 3.5rem;
                 opacity: 0.6;
             }
-
             .hero-shell,
             .main-grid,
             .games-section,
@@ -385,34 +401,28 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
-
             .hero-shell {
                 padding-top: 2.75rem;
                 padding-bottom: 2.25rem;
                 gap: 1.75rem;
             }
-
             .hero-badge {
                 padding: 0.55rem 0.9rem;
                 font-size: 0.65rem;
                 margin-bottom: 1rem;
             }
-
             .hero-title {
                 font-size: clamp(2.35rem, 11vw, 3.35rem);
                 line-height: 0.96;
             }
-
             .hero-copy {
                 font-size: 0.95rem;
                 line-height: 1.5;
                 margin-top: 1rem;
             }
-
             .hero-actions {
                 margin-top: 1.25rem;
             }
-
             .hero-actions .gold-btn,
             .hero-offer-card .gold-btn,
             .final-cta-box .gold-btn {
@@ -421,7 +431,6 @@
                 padding: 0.95rem 1.1rem;
                 font-size: 0.95rem;
             }
-
             .hero-trust {
                 flex-direction: column;
                 align-items: flex-start;
@@ -429,313 +438,251 @@
                 margin-top: 1.25rem;
                 font-size: 0.8rem;
             }
-
             .hero-sticker {
                 top: -0.5rem;
                 right: 0;
                 transform: scale(0.7);
                 transform-origin: top right;
             }
-
             .hero-offer-card {
                 padding: 1rem;
                 border-radius: 1.25rem;
             }
-
             .hero-offer-card .text-5xl {
                 font-size: 2rem;
             }
-
             .hero-offer-card .text-4xl {
                 font-size: 1.6rem;
             }
-
             .hero-offer-card .text-2xl,
             .hero-offer-card .text-xl,
             .hero-offer-card .text-lg {
                 font-size: 1rem;
             }
-
             .main-grid {
                 padding-top: 1.5rem;
                 padding-bottom: 1.5rem;
                 gap: 1rem;
             }
-
             .winners-card {
                 padding: 1rem;
             }
-
             .winners-card h2 {
                 font-size: 1rem;
             }
-
             .winners-card .fa-trophy {
                 font-size: 1rem;
             }
-
             .winners-list {
                 max-height: 18rem;
                 padding-right: 0.25rem;
             }
-
             .winner-item {
                 padding-top: 0.4rem;
                 padding-bottom: 0.55rem;
             }
-
             .winner-item>div:first-child {
                 gap: 0.65rem;
             }
-
             .winner-item>div:first-child>div:first-child {
                 width: 2rem;
                 height: 2rem;
                 font-size: 0.95rem;
             }
-
             .winner-item p:first-child {
                 font-size: 0.85rem;
             }
-
             .winner-amount {
                 font-size: 1rem;
             }
-
             .match-card>div:first-child {
                 padding: 0.9rem 1rem;
             }
-
             .match-card h2 {
                 font-size: 1rem;
             }
-
             #matchTimer {
                 font-size: 0.9rem;
             }
-
             .match-body {
                 padding: 1rem;
                 gap: 0.75rem;
             }
-
             .match-body>div:first-child,
             .match-body>div:last-child {
                 padding: 1rem;
             }
-
             .match-body img {
                 width: 2.5rem;
                 height: 2.5rem;
             }
-
             .match-body .grid.grid-cols-3 span {
                 font-size: 0.85rem;
                 margin-top: 0.4rem;
             }
-
             #liveScore {
                 font-size: 2rem;
             }
-
             .odds-grid {
                 gap: 0.5rem;
                 margin-top: 1rem;
             }
-
             .odds-grid button {
                 padding-top: 0.65rem;
                 padding-bottom: 0.65rem;
             }
-
             .odds-grid .text-2xl {
                 font-size: 1.1rem;
             }
-
             .match-card>div:last-child {
                 padding: 0.75rem 0.5rem;
                 gap: 0.5rem;
             }
-
             .match-card>div:last-child i {
                 font-size: 1.1rem;
             }
-
             .match-card>div:last-child p {
                 font-size: 0.65rem;
             }
-
             .games-section {
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-
             .games-section .premium-card {
                 padding: 1rem;
             }
-
             .games-section .flex.justify-between.items-center {
                 align-items: flex-start;
                 gap: 0.75rem;
             }
-
             .games-section h2 {
                 font-size: 1.1rem;
             }
-
             .games-section button {
                 font-size: 0.7rem;
                 padding: 0.55rem 0.8rem;
             }
-
             .games-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 0.75rem;
             }
-
             .games-grid>div>div:first-child {
                 height: 5.25rem;
                 font-size: 2rem;
                 border-radius: 1rem;
             }
-
             .games-grid p {
                 font-size: 0.75rem;
                 margin-top: 0.4rem;
             }
-
             .video-section {
                 margin-top: 1.75rem;
                 margin-bottom: 1.75rem;
             }
-
             .video-section h2 {
                 font-size: 1.65rem;
             }
-
             .video-section>div:first-child>p {
                 font-size: 0.85rem;
                 padding: 0 0.25rem;
             }
-
             .video-grid {
                 gap: 1rem;
             }
-
             .video-overlay {
                 padding: 0.85rem;
                 min-height: 9rem;
             }
-
             .video-overlay .text-lg {
                 font-size: 0.95rem;
             }
-
             .video-overlay .text-sm {
                 font-size: 0.78rem;
                 line-height: 1.4;
             }
-
+            .hub-tab {
+                width: 100%;
+                justify-content: center;
+            }
             .play-icon {
                 font-size: 2rem;
                 opacity: 0.75;
             }
-
             .steps-section {
                 margin-top: 1.75rem;
                 margin-bottom: 1.75rem;
             }
-
             .steps-section h2 {
                 font-size: 1.6rem;
             }
-
             .steps-grid {
                 gap: 0.75rem;
             }
-
             .steps-grid>div {
                 padding: 1rem;
             }
-
             .steps-grid .w-16 {
                 width: 3rem;
                 height: 3rem;
                 font-size: 1.5rem;
             }
-
             .steps-grid .text-2xl {
                 font-size: 1.1rem;
             }
-
             .steps-grid .text-sm {
                 font-size: 0.8rem;
             }
-
             .final-cta-wrap {
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
             }
-
             .final-cta-box {
                 padding: 1rem;
                 gap: 1rem;
                 border-radius: 1.25rem;
             }
-
             .final-cta-box>div:first-child {
                 flex-direction: column;
                 gap: 0.75rem;
                 text-align: center;
             }
-
             .final-cta-box .text-7xl {
                 font-size: 2.75rem;
                 line-height: 1;
             }
-
             .final-cta-box .text-4xl,
             .final-cta-box .md\:text-5xl {
                 font-size: 1.7rem;
             }
-
             .final-cta-box .text-2xl {
                 font-size: 1rem;
             }
-
             footer {
                 margin-top: 1.75rem;
                 padding-top: 2rem;
                 padding-bottom: 2rem;
             }
-
             .footer-stats {
                 gap: 0.75rem;
             }
-
             .footer-stats>div {
                 padding: 0.65rem 0.35rem;
             }
-
             .footer-stats i {
                 font-size: 1.4rem;
             }
-
             .footer-stats .text-2xl {
                 font-size: 1rem;
             }
-
             footer .text-center.text-xs.text-gray-400.mt-10 {
                 margin-top: 1.25rem;
                 padding: 0 1rem;
                 line-height: 1.5;
             }
-
             .video-modal-shell {
                 margin-left: 0.75rem;
                 margin-right: 0.75rem;
             }
-
             .video-modal-close {
                 top: -0.85rem;
                 right: 0.25rem;
@@ -745,12 +692,10 @@
                 border: 1px solid rgba(244, 197, 66, 0.4);
                 border-radius: 0.75rem;
             }
-
             #fullscreenVideo {
                 border-width: 1px;
                 border-radius: 1rem;
             }
-
             .premium-card:hover,
             .video-card:hover,
             .gold-btn:hover {
@@ -831,7 +776,16 @@
                     <span class="ml-auto text-xs bg-green-500/40 text-green-300 px-2 py-0.5 rounded-full flex items-center gap-1"><span class="live-dot-pulse w-2 h-2 bg-green-400 rounded-full inline-block"></span> LIVE</span>
                 </div>
                 <div id="winnersList" class="winners-list space-y-4 max-h-[500px] overflow-y-auto pr-2">
-                    <!-- dynamic winners injected -->
+                    <div class="winner-item flex justify-between items-center gap-3 pb-3 pt-2 transition-all">
+                        <div class="flex gap-3 items-center min-w-0">
+                            <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-xl border border-amber-400/50 shrink-0">✈️</div>
+                            <div class="min-w-0">
+                                <p class="font-bold text-white truncate">Ethan W.</p>
+                                <p class="text-xs text-gray-400 truncate">Aviator</p>
+                            </div>
+                        </div>
+                        <div class="winner-amount text-xl font-black shrink-0 text-right">$18,420</div>
+                    </div>
                 </div>
                 <div class="mt-6 pt-3 text-center text-sm font-semibold text-amber-300 border-t border-amber-500/30">
                     <i class="fas fa-chart-line mr-2 animate-pulse"></i> New wins every 10 seconds — join the streak!
@@ -850,14 +804,16 @@
                     <div class="col-span-2 bg-black/40 rounded-xl p-6 border border-white/10">
                         <div class="text-center mb-4 text-sm font-bold text-amber-300">🏆 UEFA CHAMPIONS LEAGUE • SEMI-FINALS</div>
                         <div class="grid grid-cols-3 gap-2 items-center text-center">
-                            <div class="transform transition hover:scale-110"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/realmadrid.svg" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg'" class="w-16 h-16 mx-auto drop-shadow-lg" alt="Real Madrid" loading="lazy">
+                            <div class="transform transition hover:scale-110"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/realmadrid.svg" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg'" class="w-16 h-16 mx-auto drop-shadow-lg" alt="Real Madrid"
+                                    loading="lazy">
                                 <span class="font-black text-lg text-white block mt-2">Real Madrid</span>
                             </div>
                             <div>
                                 <div class="text-5xl font-black gold-text" id="liveScore">2 : 1</div>
                                 <div class="text-xs mt-2 bg-amber-500/30 rounded-full px-2 py-1 inline-block glow-text text-white">LIVE</div>
                             </div>
-                            <div class="transform transition hover:scale-110"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/manchester-city.svg" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg'" class="w-16 h-16 mx-auto drop-shadow-lg" alt="Man City" loading="lazy">
+                            <div class="transform transition hover:scale-110"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/manchester-city.svg" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg'" class="w-16 h-16 mx-auto drop-shadow-lg" alt="Man City"
+                                    loading="lazy">
                                 <span class="font-black text-lg text-white block mt-2">Man City</span>
                             </div>
                         </div>
@@ -1064,15 +1020,96 @@
     </div>
 
     <script>
-        // REDIRECT FUNCTION
-        function redirectTo1xBet() {
-            window.location.href = "https://1xbet.com/?ref=ATA_TRACKING_ID";
+        const DEFAULT_AFFILIATE_LINK = "https://1xbet.com/?ref=10651298";
+        const leadAffiliateLinks = {
+            default: DEFAULT_AFFILIATE_LINK,
+            lead1: "https://reffpa.com/L?tag=d_5551353m_97c_lead1",
+            lead2: "https://reffpa.com/L?tag=d_5551353m_97c_lead2",
+            lead2u: "https://reffpa.com/L?tag=d_5551353m_97c_lead2U",
+            lead3g: "https://reffpa.com/L?tag=d_5551353m_97c_lead3G",
+            lead4i: "https://reffpa.com/L?tag=d_5551353m_97c_lead4I",
+            lead5p: "https://reffpa.com/L?tag=d_5551353m_97c_lead5P",
+            lead6m: "https://reffpa.com/L?tag=d_5551353m_97c_lead6M",
+            lead7z: "https://reffpa.com/L?tag=d_5551353m_97c_lead7z",
+            lead8c: "https://reffpa.com/L?tag=d_5551353m_97c_lead8c"
+
+        };
+
+        function normalizeLeadSlug(value) {
+            return (value || "")
+                .toLowerCase()
+                .trim()
+                .replace(/[^a-z0-9-_]/g, "");
         }
+
+        function getLeadSlugFromPath() {
+            const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, "");
+            if (!cleanPath || cleanPath === "index.html" || cleanPath === "404.html") {
+                return "";
+            }
+
+            return normalizeLeadSlug(cleanPath.split("/")[0]);
+        }
+
+        function getLeadSlug() {
+            const params = new URLSearchParams(window.location.search);
+            const fromQuery = normalizeLeadSlug(params.get("lead"));
+            const fromPath = getLeadSlugFromPath();
+            return fromQuery || fromPath || "default";
+        }
+
+        function getAffiliateLinkForLead(leadSlug) {
+            return leadAffiliateLinks[leadSlug] || leadAffiliateLinks.default;
+        }
+
+        function ensureDataLayer() {
+            if (!Array.isArray(window.dataLayer)) {
+                window.dataLayer = [];
+            }
+            return window.dataLayer;
+        }
+
+        function trackLeadEvent(eventName, details = {}) {
+            const payload = {
+                event: eventName,
+                leadSlug: currentLeadSlug,
+                affiliateLink: currentAffiliateLink,
+                pagePath: window.location.pathname,
+                ...details
+            };
+
+            try {
+                ensureDataLayer().push(payload);
+
+                if (typeof window.gtag === "function") {
+                    window.gtag("event", eventName, payload);
+                }
+            } catch (error) {
+                console.warn("Tracking skipped:", error);
+            }
+        }
+
+        const currentLeadSlug = getLeadSlug();
+        const currentAffiliateLink = getAffiliateLinkForLead(currentLeadSlug);
+        document.documentElement.dataset.leadSlug = currentLeadSlug;
+
+        // REDIRECT FUNCTION
+        function redirectTo1xBet(triggerName = "cta_click") {
+            trackLeadEvent("affiliate_redirect", {
+                triggerName
+            });
+            window.location.href = currentAffiliateLink;
+        }
+
+        trackLeadEvent("lead_landing_view");
 
         // FULLSCREEN VIDEO PLAYER
         function openFullVideo(videoUrl) {
             const modal = document.getElementById('fullscreenVideoModal');
             const video = document.getElementById('fullscreenVideo');
+            trackLeadEvent("video_open", {
+                videoUrl
+            });
             video.src = videoUrl;
             video.load();
             modal.classList.remove('invisible', 'opacity-0');
@@ -1153,14 +1190,18 @@
         };
         let currentWins = [...initialWins];
 
-        function renderWinners() {
-            const container = document.getElementById('winnersList');
-            if (!container) return;
-            container.innerHTML = currentWins.map(win => `
+        function createWinnerMarkup(win) {
+            return `
       <div class="winner-item flex justify-between items-center gap-3 pb-3 pt-2 transition-all">
         <div class="flex gap-3 items-center min-w-0"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-xl border border-amber-400/50 shrink-0">${win.icon}</div><div class="min-w-0"><p class="font-bold text-white truncate">${win.name}</p><p class="text-xs text-gray-400 truncate">${win.game}</p></div></div><div class="winner-amount text-xl font-black shrink-0 text-right">${win.amount}</div>
       </div>
-    `).join('');
+    `;
+        }
+
+        function renderWinners() {
+            const container = document.getElementById('winnersList');
+            if (!container) return;
+            container.innerHTML = currentWins.map(createWinnerMarkup).join('');
         }
 
         function addNewWinner() {
@@ -1182,7 +1223,12 @@
                 setTimeout(() => firstItem.classList.remove('new-win'), 600);
             }
         }
-        renderWinners();
+
+        function initializeInteractiveSections() {
+            renderWinners();
+        }
+
+        initializeInteractiveSections();
         setInterval(addNewWinner, 10000);
 
         // LIVE MATCH COUNTDOWN

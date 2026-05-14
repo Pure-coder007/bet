@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        (function() {
+            const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, "");
+            const slug = cleanPath.split("/")[0];
+            const nextUrl = slug ? `/?lead=${encodeURIComponent(slug)}` : "/";
+            window.location.replace(nextUrl);
+        })();
+    </script>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            background: #02070e;
+            color: #f7e6a8;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        a {
+            color: #ffd700;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>Redirecting to the ATA landing page...</p>
+        <p><a id="fallbackLink" href="/">Continue</a></p>
+    </div>
+    <script>
+        (function() {
+            const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, "");
+            const slug = cleanPath.split("/")[0];
+            const nextUrl = slug ? `/?lead=${encodeURIComponent(slug)}` : "/";
+            document.getElementById("fallbackLink").href = nextUrl;
+        })();
+    </script>
+</body>
+
+</html>
