@@ -23,17 +23,14 @@
             overflow-x: hidden;
             position: relative;
         }
-
+        
         body::before {
             content: '';
             position: fixed;
             inset: -10%;
             z-index: -1;
             pointer-events: none;
-            background:
-                radial-gradient(circle at 18% 24%, rgba(214, 180, 95, 0.14), transparent 24%),
-                radial-gradient(circle at 78% 18%, rgba(255, 215, 0, 0.08), transparent 20%),
-                radial-gradient(circle at 60% 80%, rgba(59, 130, 246, 0.08), transparent 22%);
+            background: radial-gradient(circle at 18% 24%, rgba(214, 180, 95, 0.14), transparent 24%), radial-gradient(circle at 78% 18%, rgba(255, 215, 0, 0.08), transparent 20%), radial-gradient(circle at 60% 80%, rgba(59, 130, 246, 0.08), transparent 22%);
             filter: blur(8px);
             animation: auroraShift 16s ease-in-out infinite alternate;
         }
@@ -99,14 +96,14 @@
             transform: translateY(-2px) scale(1.015);
             box-shadow: 0 24px 44px -18px rgba(244, 197, 66, 0.92), inset 0 1px 0 rgba(255, 255, 255, 0.86);
         }
-
+        
         .dice-nav-icon {
             position: relative;
             width: 34px;
             height: 34px;
             flex: 0 0 auto;
         }
-
+        
         .dice-cube {
             position: absolute;
             width: 21px;
@@ -116,31 +113,26 @@
             border: 1px solid rgba(255, 243, 210, 0.76);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
-
+        
         .dice-cube::before {
             content: '';
             position: absolute;
             inset: 4px;
-            background-image:
-                radial-gradient(circle at 25% 25%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 75% 25%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 50% 50%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 25% 75%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 75% 75%, #f6df9b 0 2px, transparent 2.2px);
+            background-image: radial-gradient(circle at 25% 25%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 75% 25%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 50% 50%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 25% 75%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 75% 75%, #f6df9b 0 2px, transparent 2.2px);
         }
-
+        
         .dice-cube-a {
             top: 0;
             left: 0;
             animation: diceOrbitIndexA 3.6s ease-in-out infinite;
         }
-
+        
         .dice-cube-b {
             right: 0;
             bottom: 0;
             animation: diceOrbitIndexB 3.6s ease-in-out infinite;
         }
-
+        
         .dice-nav-copy {
             position: relative;
             z-index: 1;
@@ -149,7 +141,7 @@
             align-items: flex-start;
             line-height: 1;
         }
-
+        
         .dice-nav-copy small {
             font-size: 0.5rem;
             font-weight: 900;
@@ -158,14 +150,14 @@
             opacity: 0.74;
             margin-bottom: 0.22rem;
         }
-
+        
         .dice-nav-copy strong {
             font-size: 0.72rem;
             font-weight: 900;
             letter-spacing: 0.04em;
             text-transform: uppercase;
         }
-
+        
         @keyframes navSweepIndex {
             0%,
             8% {
@@ -184,7 +176,7 @@
                 opacity: 0;
             }
         }
-
+        
         @keyframes diceOrbitIndexA {
             0%,
             100% {
@@ -200,7 +192,7 @@
                 transform: translate3d(-2px, -2px, 0) rotate(-5deg);
             }
         }
-
+        
         @keyframes diceOrbitIndexB {
             0%,
             100% {
@@ -284,7 +276,7 @@
         .premium-glow {
             box-shadow: 0 28px 48px -20px rgba(214, 180, 95, 0.45);
         }
-
+        
         .hero-stage,
         .content-section,
         .site-footer {
@@ -292,19 +284,19 @@
             transform: translateY(26px) scale(0.985);
             transition: opacity 0.8s ease, transform 0.8s ease;
         }
-
+        
         .hero-stage.is-visible,
         .content-section.is-visible,
         .site-footer.is-visible {
             opacity: 1;
             transform: translateY(0) scale(1);
         }
-
+        
         .spotlight-card {
             position: relative;
             overflow: hidden;
         }
-
+        
         .spotlight-card::after {
             content: '';
             position: absolute;
@@ -316,63 +308,60 @@
             animation: cardSweep 6.4s ease-in-out infinite;
             pointer-events: none;
         }
-
+        
         .float-card {
             animation: floatCard 6s ease-in-out infinite;
         }
-
+        
         .glow-pop {
             animation: glowPop 4.5s ease-in-out infinite;
         }
-
+        
         .catchy-pill {
             font-size: 0.7rem;
             letter-spacing: 0.12em;
         }
-
+        
         .compact-hero-title {
             font-size: clamp(2.3rem, 6vw, 4.8rem);
             line-height: 1.02;
         }
-
+        
         .compact-hero-copy {
             font-size: clamp(0.96rem, 2vw, 1.08rem);
             line-height: 1.75;
         }
-
+        
         .compact-button {
             font-size: 0.9rem;
             padding: 0.88rem 1.6rem;
         }
-
+        
         .compact-section-title {
             font-size: clamp(1.9rem, 4.2vw, 3.25rem);
             line-height: 1.06;
         }
-
+        
         .compact-section-copy {
             font-size: clamp(0.95rem, 1.8vw, 1.02rem);
             line-height: 1.72;
         }
-
+        
         .compact-card-title {
             font-size: clamp(1.02rem, 2vw, 1.28rem);
         }
-
+        
         .compact-card-copy {
             font-size: 0.92rem;
             line-height: 1.7;
         }
-
+        
         .ata-footer {
             position: relative;
             overflow: hidden;
-            background:
-                radial-gradient(circle at top left, rgba(246, 223, 155, 0.16), transparent 30%),
-                radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 32%),
-                linear-gradient(135deg, #05070e 0%, #0c1420 46%, #040404 100%);
+            background: radial-gradient(circle at top left, rgba(246, 223, 155, 0.16), transparent 30%), radial-gradient(circle at bottom right, rgba(59, 130, 246, 0.12), transparent 32%), linear-gradient(135deg, #05070e 0%, #0c1420 46%, #040404 100%);
         }
-
+        
         .ata-footer::before {
             content: '';
             position: absolute;
@@ -382,12 +371,12 @@
             animation: footerSweep 7s ease-in-out infinite;
             pointer-events: none;
         }
-
+        
         .footer-shell {
             position: relative;
             z-index: 1;
         }
-
+        
         .footer-hero {
             display: grid;
             grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
@@ -395,7 +384,7 @@
             align-items: end;
             margin-bottom: 1.75rem;
         }
-
+        
         .footer-kicker {
             display: inline-flex;
             align-items: center;
@@ -406,7 +395,7 @@
             color: #f6df9b;
             margin-bottom: 0.9rem;
         }
-
+        
         .footer-title {
             font-size: clamp(1.85rem, 4vw, 3rem);
             line-height: 1.05;
@@ -414,14 +403,14 @@
             letter-spacing: -0.04em;
             max-width: 12ch;
         }
-
+        
         .footer-copy {
             color: rgba(229, 231, 235, 0.82);
             max-width: 48rem;
             line-height: 1.75;
             margin-top: 1rem;
         }
-
+        
         .footer-badge {
             padding: 1.2rem 1.25rem;
             border-radius: 1.4rem;
@@ -430,7 +419,7 @@
             backdrop-filter: blur(16px);
             box-shadow: 0 24px 45px -26px rgba(0, 0, 0, 0.72);
         }
-
+        
         .footer-badge-label {
             display: inline-block;
             font-size: 0.72rem;
@@ -440,21 +429,21 @@
             color: #f6df9b;
             margin-bottom: 0.55rem;
         }
-
+        
         .footer-badge strong {
             display: block;
             font-size: 1rem;
             line-height: 1.55;
             color: #ffffff;
         }
-
+        
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
-
+        
         .footer-panel {
             position: relative;
             padding: 1.35rem;
@@ -464,7 +453,7 @@
             backdrop-filter: blur(16px);
             box-shadow: 0 28px 48px -32px rgba(0, 0, 0, 0.88);
         }
-
+        
         .footer-panel-label {
             display: inline-flex;
             align-items: center;
@@ -476,7 +465,7 @@
             color: #f6df9b;
             margin-bottom: 1rem;
         }
-
+        
         .footer-contact-link {
             display: block;
             width: fit-content;
@@ -485,30 +474,30 @@
             line-height: 1.6;
             transition: color 0.25s ease, transform 0.25s ease;
         }
-
-        .footer-contact-link + .footer-contact-link {
+        
+        .footer-contact-link+.footer-contact-link {
             margin-top: 0.45rem;
         }
-
+        
         .footer-contact-link:hover {
             color: #f6df9b;
             transform: translateX(4px);
         }
-
+        
         .footer-note {
             color: rgba(209, 213, 219, 0.7);
             line-height: 1.7;
             margin-top: 0.85rem;
             font-size: 0.94rem;
         }
-
+        
         .footer-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.9rem;
             margin-top: 1.5rem;
         }
-
+        
         .footer-action-btn {
             display: inline-flex;
             align-items: center;
@@ -522,24 +511,24 @@
             font-weight: 800;
             transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
         }
-
+        
         .footer-action-btn:hover {
             transform: translateY(-2px);
             border-color: rgba(246, 223, 155, 0.65);
             background: rgba(255, 255, 255, 0.12);
             box-shadow: 0 18px 34px -20px rgba(246, 223, 155, 0.52);
         }
-
+        
         .footer-action-btn.primary {
             color: #110c02;
             background: linear-gradient(135deg, #fff4c7 0%, #f6df9b 36%, #d6b45f 100%);
             box-shadow: 0 20px 38px -20px rgba(246, 223, 155, 0.75);
         }
-
+        
         .footer-action-btn.primary:hover {
             background: linear-gradient(135deg, #fff7d7 0%, #f9e6ae 38%, #ddb964 100%);
         }
-
+        
         .footer-meta {
             display: flex;
             flex-wrap: wrap;
@@ -551,7 +540,7 @@
             color: rgba(209, 213, 219, 0.72);
             font-size: 0.84rem;
         }
-
+        
         @keyframes auroraShift {
             0% {
                 transform: translate3d(-1.5%, 0, 0) scale(1);
@@ -563,7 +552,7 @@
                 transform: translate3d(-0.8%, 1.4%, 0) scale(1.02);
             }
         }
-
+        
         @keyframes goldFlow {
             0%,
             100% {
@@ -573,7 +562,7 @@
                 background-position: 100% 50%;
             }
         }
-
+        
         @keyframes navGlowPulse {
             0%,
             100% {
@@ -583,7 +572,7 @@
                 box-shadow: 0 24px 38px -16px rgba(214, 180, 95, 0.18);
             }
         }
-
+        
         @keyframes cardSweep {
             0%,
             12% {
@@ -602,7 +591,7 @@
                 opacity: 0;
             }
         }
-
+        
         @keyframes floatCard {
             0%,
             100% {
@@ -612,7 +601,7 @@
                 transform: translateY(-8px);
             }
         }
-
+        
         @keyframes glowPop {
             0%,
             100% {
@@ -622,7 +611,7 @@
                 box-shadow: 0 0 24px rgba(214, 180, 95, 0.22);
             }
         }
-
+        
         @keyframes footerSweep {
             0%,
             15% {
@@ -734,7 +723,7 @@
                 width: 100%;
             }
         }
-
+        
         @media (max-width: 480px) {
             .dice-nav-copy small {
                 letter-spacing: 0.14em;
@@ -793,7 +782,7 @@
             <a href="bet.html" id="casinoNavLink" class="dice-nav-link">
                 <span class="dice-nav-icon" aria-hidden="true">
                     <span class="dice-cube dice-cube-a"></span>
-                    <span class="dice-cube dice-cube-b"></span>
+                <span class="dice-cube dice-cube-b"></span>
                 </span>
                 <span class="dice-nav-copy">
                     <small>Casino access</small>
@@ -921,7 +910,7 @@
             <div class="spotlight-card bg-gradient-to-br from-[#0F172A] via-amber-950/30 to-[#020617] border-2 border-amber-500/50 rounded-3xl p-8 md:p-12 text-center backdrop-blur-md">
                 <h2 class="compact-section-title font-black gold-text">Ready to join ATA Affiliates?</h2>
                 <p class="compact-section-copy text-gray-200 mt-4 max-w-2xl mx-auto">Apply today and receive your first campaign instructions. Bring discipline, proof, and consistency. ATA brings the structure.</p>
-                <a href="mailto:info@angelstouchamerica.com?subject=ATA%20Affiliates%20Application" class="compact-button inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black font-black rounded-full mt-8 md:mt-10 transition-all shadow-2xl">Start Application →</a>
+                <a href="mailto:favour@angelstouchamerica.com?subject=ATA%20Affiliates%20Application" class="compact-button inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-black font-black rounded-full mt-8 md:mt-10 transition-all shadow-2xl">Start Application →</a>
             </div>
         </section>
 
