@@ -565,7 +565,215 @@
                 font-size: 1.125rem;
             }
         }
-        
+
+        .ata-footer {
+            position: relative;
+            overflow: hidden;
+            background:
+                radial-gradient(circle at top left, rgba(244, 197, 66, 0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(255, 68, 68, 0.12), transparent 30%),
+                linear-gradient(135deg, #030811 0%, #0b1622 50%, #04070c 100%);
+        }
+
+        .ata-footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+            transform: translateX(-120%);
+            animation: footerSweep 7s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .footer-shell {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-hero {
+            display: grid;
+            grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
+            gap: 1.5rem;
+            align-items: end;
+            margin-bottom: 1.75rem;
+        }
+
+        .footer-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #ffe686;
+            margin-bottom: 0.9rem;
+        }
+
+        .footer-title {
+            font-size: clamp(1.85rem, 4vw, 3rem);
+            line-height: 1.05;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            max-width: 13ch;
+            color: #ffffff;
+        }
+
+        .footer-copy {
+            color: rgba(229, 231, 235, 0.82);
+            max-width: 48rem;
+            line-height: 1.75;
+            margin-top: 1rem;
+        }
+
+        .footer-badge {
+            padding: 1.2rem 1.25rem;
+            border-radius: 1.4rem;
+            border: 1px solid rgba(255, 230, 134, 0.22);
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.04));
+            backdrop-filter: blur(16px);
+            box-shadow: 0 24px 45px -26px rgba(0, 0, 0, 0.72);
+        }
+
+        .footer-badge-label {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #ffe686;
+            margin-bottom: 0.55rem;
+        }
+
+        .footer-badge strong {
+            display: block;
+            font-size: 1rem;
+            line-height: 1.55;
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .footer-panel {
+            position: relative;
+            padding: 1.35rem;
+            border-radius: 1.5rem;
+            border: 1px solid rgba(255, 230, 134, 0.18);
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(7, 10, 18, 0.86));
+            backdrop-filter: blur(16px);
+            box-shadow: 0 28px 48px -32px rgba(0, 0, 0, 0.88);
+        }
+
+        .footer-panel-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #ffe686;
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact-link {
+            display: block;
+            width: fit-content;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.6;
+            transition: color 0.25s ease, transform 0.25s ease;
+        }
+
+        .footer-contact-link + .footer-contact-link {
+            margin-top: 0.45rem;
+        }
+
+        .footer-contact-link:hover {
+            color: #ffe686;
+            transform: translateX(4px);
+        }
+
+        .footer-note {
+            color: rgba(209, 213, 219, 0.7);
+            line-height: 1.7;
+            margin-top: 0.85rem;
+            font-size: 0.94rem;
+        }
+
+        .footer-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            padding: 0.95rem 1.2rem;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 230, 134, 0.24);
+            background: rgba(255, 255, 255, 0.06);
+            color: #ffffff;
+            font-weight: 800;
+            transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .footer-action-btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255, 230, 134, 0.65);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 18px 34px -20px rgba(255, 230, 134, 0.52);
+        }
+
+        .footer-action-btn.primary {
+            color: #1a1a2e;
+            background: linear-gradient(135deg, #fff4c7 0%, #ffe686 36%, #f4c542 100%);
+            box-shadow: 0 20px 38px -20px rgba(255, 230, 134, 0.75);
+        }
+
+        .footer-action-btn.primary:hover {
+            background: linear-gradient(135deg, #fff7d7 0%, #ffec9f 38%, #f7ca4e 100%);
+        }
+
+        .footer-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 0.8rem 1.2rem;
+            margin-top: 1.8rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid rgba(255, 230, 134, 0.14);
+            color: rgba(209, 213, 219, 0.72);
+            font-size: 0.84rem;
+        }
+
+        @keyframes footerSweep {
+            0%,
+            15% {
+                transform: translateX(-120%);
+                opacity: 0;
+            }
+            30% {
+                opacity: 0.45;
+            }
+            55% {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(120%);
+                opacity: 0;
+            }
+        }
+
          ::-webkit-scrollbar {
             width: 8px;
         }
@@ -581,7 +789,7 @@
         
         @media (max-width: 767px) {
             body {
-                font-size: 14px;
+                font-size: 13px;
             }
             .nav-shell {
                 gap: 0.75rem;
@@ -616,6 +824,10 @@
                 padding-left: 1rem;
                 padding-right: 1rem;
             }
+            .footer-hero,
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
             .hero-shell {
                 padding-top: 2.75rem;
                 padding-bottom: 2.25rem;
@@ -623,16 +835,16 @@
             }
             .hero-badge {
                 padding: 0.55rem 0.9rem;
-                font-size: 0.65rem;
+                font-size: 0.58rem;
                 margin-bottom: 1rem;
             }
             .hero-title {
-                font-size: clamp(2.35rem, 11vw, 3.35rem);
-                line-height: 0.96;
+                font-size: clamp(1.9rem, 9vw, 2.8rem);
+                line-height: 1;
             }
             .hero-copy {
-                font-size: 0.95rem;
-                line-height: 1.5;
+                font-size: 0.84rem;
+                line-height: 1.45;
                 margin-top: 1rem;
             }
             .hero-actions {
@@ -644,14 +856,14 @@
                 width: 100%;
                 justify-content: center;
                 padding: 0.95rem 1.1rem;
-                font-size: 0.95rem;
+                font-size: 0.84rem;
             }
             .hero-trust {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.65rem;
                 margin-top: 1.25rem;
-                font-size: 0.8rem;
+                font-size: 0.72rem;
             }
             .hero-sticker {
                 top: -0.5rem;
@@ -664,15 +876,15 @@
                 border-radius: 1.25rem;
             }
             .hero-offer-card .text-5xl {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             .hero-offer-card .text-4xl {
-                font-size: 1.6rem;
+                font-size: 1.35rem;
             }
             .hero-offer-card .text-2xl,
             .hero-offer-card .text-xl,
             .hero-offer-card .text-lg {
-                font-size: 1rem;
+                font-size: 0.88rem;
             }
             .main-grid {
                 padding-top: 1.5rem;
@@ -683,10 +895,10 @@
                 padding: 1rem;
             }
             .winners-card h2 {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .winners-card .fa-trophy {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             .winners-list {
                 max-height: 18rem;
@@ -705,19 +917,19 @@
                 font-size: 0.95rem;
             }
             .winner-item p:first-child {
-                font-size: 0.85rem;
+                font-size: 0.78rem;
             }
             .winner-amount {
-                font-size: 1rem;
+                font-size: 0.88rem;
             }
             .match-card>div:first-child {
                 padding: 0.9rem 1rem;
             }
             .match-card h2 {
-                font-size: 1rem;
+                font-size: 0.9rem;
             }
             #matchTimer {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
             .match-body {
                 padding: 1rem;
@@ -732,11 +944,11 @@
                 height: 2.5rem;
             }
             .match-body .grid.grid-cols-3 span {
-                font-size: 0.85rem;
+                font-size: 0.75rem;
                 margin-top: 0.4rem;
             }
             #liveScore {
-                font-size: 2rem;
+                font-size: 1.7rem;
             }
             .odds-grid {
                 gap: 0.5rem;
@@ -747,7 +959,7 @@
                 padding-bottom: 0.65rem;
             }
             .odds-grid .text-2xl {
-                font-size: 1.1rem;
+                font-size: 0.96rem;
             }
             .match-card>div:last-child {
                 padding: 0.75rem 0.5rem;
@@ -757,7 +969,7 @@
                 font-size: 1.1rem;
             }
             .match-card>div:last-child p {
-                font-size: 0.65rem;
+                font-size: 0.58rem;
             }
             .games-section {
                 margin-top: 1.5rem;
@@ -771,10 +983,10 @@
                 gap: 0.75rem;
             }
             .games-section h2 {
-                font-size: 1.1rem;
+                font-size: 0.96rem;
             }
             .games-section button {
-                font-size: 0.7rem;
+                font-size: 0.62rem;
                 padding: 0.55rem 0.8rem;
             }
             .games-grid {
@@ -787,7 +999,7 @@
                 border-radius: 1rem;
             }
             .games-grid p {
-                font-size: 0.75rem;
+                font-size: 0.68rem;
                 margin-top: 0.4rem;
             }
             .video-section {
@@ -795,10 +1007,10 @@
                 margin-bottom: 1.75rem;
             }
             .video-section h2 {
-                font-size: 1.65rem;
+                font-size: 1.35rem;
             }
             .video-section>div:first-child>p {
-                font-size: 0.85rem;
+                font-size: 0.76rem;
                 padding: 0 0.25rem;
             }
             .video-grid {
@@ -809,10 +1021,10 @@
                 min-height: 9rem;
             }
             .video-overlay .text-lg {
-                font-size: 0.95rem;
+                font-size: 0.84rem;
             }
             .video-overlay .text-sm {
-                font-size: 0.78rem;
+                font-size: 0.7rem;
                 line-height: 1.4;
             }
             .hub-tab {
@@ -828,7 +1040,7 @@
                 margin-bottom: 1.75rem;
             }
             .steps-section h2 {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
             }
             .steps-grid {
                 gap: 0.75rem;
@@ -842,10 +1054,10 @@
                 font-size: 1.5rem;
             }
             .steps-grid .text-2xl {
-                font-size: 1.1rem;
+                font-size: 0.94rem;
             }
             .steps-grid .text-sm {
-                font-size: 0.8rem;
+                font-size: 0.72rem;
             }
             .final-cta-wrap {
                 margin-top: 1.5rem;
@@ -867,10 +1079,51 @@
             }
             .final-cta-box .text-4xl,
             .final-cta-box .md\:text-5xl {
-                font-size: 1.7rem;
+                font-size: 1.4rem;
             }
             .final-cta-box .text-2xl {
-                font-size: 1rem;
+                font-size: 0.84rem;
+            }
+            .footer-kicker {
+                font-size: 0.6rem;
+                letter-spacing: 0.14em;
+            }
+            .footer-title {
+                font-size: clamp(1.28rem, 6.8vw, 1.8rem);
+                line-height: 1.12;
+            }
+            .footer-copy {
+                font-size: 0.8rem;
+                line-height: 1.55;
+            }
+            .footer-badge-label,
+            .footer-panel-label {
+                font-size: 0.64rem;
+                letter-spacing: 0.12em;
+            }
+            .footer-badge strong,
+            .footer-contact-link {
+                font-size: 0.82rem;
+                line-height: 1.5;
+            }
+            .footer-note,
+            .footer-meta {
+                font-size: 0.74rem;
+                line-height: 1.5;
+            }
+            .footer-action-btn {
+                font-size: 0.76rem;
+                padding: 0.82rem 1rem;
+            }
+            .footer-panel,
+            .footer-badge {
+                border-radius: 1.25rem;
+            }
+            .footer-actions {
+                flex-direction: column;
+            }
+            .footer-action-btn {
+                width: 100%;
             }
             footer {
                 margin-top: 1.75rem;
@@ -1218,30 +1471,53 @@
             </div>
         </div>
 
-        <footer class="border-t border-amber-500/30 bg-[#030811] mt-12 py-12">
-            <div class="footer-stats max-w-6xl mx-auto px-5 grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-                <div class="transform transition hover:scale-110"><i class="fas fa-users text-4xl text-amber-400"></i>
-                    <div class="text-2xl font-black gold-text mt-2">10M+</div>
-                    <div class="text-xs uppercase text-gray-300">Active Players</div>
+        <footer class="ata-footer border-t border-amber-500/30 mt-12">
+            <div class="footer-shell max-w-7xl mx-auto px-5 lg:px-8 py-12 md:py-16">
+                <div class="footer-hero">
+                    <div>
+                        <span class="footer-kicker"><i class="fas fa-star"></i> Contact Angels Touch America</span>
+                        <h2 class="footer-title">A sharper closing section for serious contact, support, and partnership reach.</h2>
+                        <p class="footer-copy">Speak with ATA directly by email, phone, or WhatsApp for business communication, affiliate support, and media-related requests.</p>
+                    </div>
+                    <div class="footer-badge">
+                        <span class="footer-badge-label">Fast Access</span>
+                        <strong>Direct contact options tailored for instant support and professional follow-up.</strong>
+                    </div>
                 </div>
-                <div class="transform transition hover:scale-110"><i class="fas fa-globe text-4xl text-amber-400"></i>
-                    <div class="text-2xl font-black gold-text mt-2">150+</div>
-                    <div class="text-xs uppercase text-gray-300">Countries</div>
+
+                <div class="footer-grid">
+                    <div class="footer-panel">
+                        <span class="footer-panel-label"><i class="fas fa-envelope"></i> Emails</span>
+                        <a class="footer-contact-link" href="mailto:favour@angelstouchamerica.com">favour@angelstouchamerica.com</a>
+                        <a class="footer-contact-link" href="mailto:media@angelstouchamerica.com">media@angelstouchamerica.com</a>
+                        <p class="footer-note">Use these for official communication, partnerships, and media outreach.</p>
+                    </div>
+
+                    <div class="footer-panel">
+                        <span class="footer-panel-label"><i class="fab fa-whatsapp"></i> Phone / WhatsApp</span>
+                        <a class="footer-contact-link" href="https://wa.me/2348119860223" target="_blank" rel="noopener">+234 811 986 0223</a>
+                        <a class="footer-contact-link" href="tel:+14722709475">+1 (472) 270-9475</a>
+                        <p class="footer-note">Best for rapid contact, message-based follow-up, and international communication.</p>
+                    </div>
+
+                    <div class="footer-panel">
+                        <span class="footer-panel-label"><i class="fas fa-phone"></i> Direct Phone</span>
+                        <a class="footer-contact-link" href="tel:+2349063595505">+234 906 359 5505</a>
+                        <p class="footer-note">For direct voice calls and more formal business conversations.</p>
+                    </div>
                 </div>
-                <div class="transform transition hover:scale-110"><i class="fas fa-shield-alt text-4xl text-amber-400"></i>
-                    <div class="text-2xl font-black gold-text mt-2">SSL</div>
-                    <div class="text-xs uppercase text-gray-300">100% Secure</div>
+
+                <div class="footer-actions">
+                    <a class="footer-action-btn primary" href="mailto:favour@angelstouchamerica.com"><i class="fas fa-paper-plane"></i> Email ATA</a>
+                    <a class="footer-action-btn" href="https://wa.me/2348119860223" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                    <a class="footer-action-btn" href="tel:+2349063595505"><i class="fas fa-phone"></i> Call ATA</a>
                 </div>
-                <div class="transform transition hover:scale-110"><i class="fas fa-money-bill-wave text-4xl text-amber-400"></i>
-                    <div class="text-2xl font-black gold-text mt-2">Instant</div>
-                    <div class="text-xs uppercase text-gray-300">Withdrawals</div>
-                </div>
-                <div class="transform transition hover:scale-110"><i class="fas fa-hourglass-half text-4xl text-amber-400"></i>
-                    <div class="text-2xl font-black gold-text mt-2">24/7</div>
-                    <div class="text-xs uppercase text-gray-300">Support</div>
+
+                <div class="footer-meta">
+                    <span>© 2026 Angels Touch America.</span>
+                    <span>Professional contact, affiliate support, and media communication.</span>
                 </div>
             </div>
-            <div class="text-center text-xs text-gray-400 mt-10">18+. Gambling can be addictive. Play responsibly. T&amp;Cs apply. 1xBet is a registered trademark.</div>
         </footer>
     </div>
 
