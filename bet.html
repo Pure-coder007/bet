@@ -1224,6 +1224,85 @@
             position: relative;
             z-index: 2;
         }
+        /* Responsive modal adjustments for mobile */
+        
+        @media (max-width: 640px) {
+            .game-modal-backdrop {
+                padding: 0.5rem;
+            }
+            .wheel-canvas-container {
+                width: 220px !important;
+                height: 220px !important;
+            }
+            .pointer-arrow {
+                top: -18px !important;
+                border-left-width: 18px !important;
+                border-right-width: 18px !important;
+                border-top-width: 45px !important;
+            }
+            .pointer-arrow::after {
+                top: -48px !important;
+                left: -16px !important;
+                font-size: 28px !important;
+            }
+            .modal-bg-img {
+                border-radius: 1.25rem !important;
+            }
+            .gold-btn {
+                font-size: 0.875rem !important;
+                padding: 0.5rem 1rem !important;
+            }
+        }
+        /* Small mobile devices */
+        
+        @media (max-width: 480px) {
+            .wheel-canvas-container {
+                width: 180px !important;
+                height: 180px !important;
+            }
+            .pointer-arrow {
+                top: -15px !important;
+                border-left-width: 14px !important;
+                border-right-width: 14px !important;
+                border-top-width: 38px !important;
+            }
+            .pointer-arrow::after {
+                top: -40px !important;
+                left: -12px !important;
+                font-size: 22px !important;
+            }
+            .modal-bg-img .relative.z-10.p-6 {
+                padding: 0.75rem !important;
+            }
+        }
+        
+        .wheel-canvas-container {
+            position: relative;
+            width: 100%;
+            max-width: 340px;
+            height: auto;
+            aspect-ratio: 1 / 1;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 641px) {
+            .wheel-canvas-container {
+                width: 340px;
+                height: 340px;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .wheel-canvas-container {
+                max-width: 220px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .wheel-canvas-container {
+                max-width: 180px;
+            }
+        }
     </style>
 </head>
 
@@ -1528,37 +1607,41 @@
         </div>
     </div>
 
-    <!-- SPIN THE WHEEL MODAL - appears every 20 seconds -->
+    <!-- SPIN THE WHEEL MODAL - appears every 20 seconds - FULLY RESPONSIVE -->
     <div id="spinGameModal" class="game-modal-backdrop hidden">
-        <div class="max-w-3xl w-full mx-5 rounded-3xl border-2 border-amber-400/70 shadow-2xl overflow-hidden modal-bg-img">
-            <div class="relative z-10 p-6">
-                <button id="closeSpinModal" class="absolute top-3 right-4 text-white/80 hover:text-amber-300 text-3xl">&times;</button>
-                <div class="text-center mb-3">
-                    <i class="fas fa-gem gold-text text-5xl gem-float"></i>
-                    <h3 class="text-3xl font-black gold-text mt-2">SPIN & WIN!</h3>
-                    <p class="text-gray-200 text-sm">Every spin wins a prize + exclusive promo code for 1xBet</p>
-                    <br>
+        <div class="max-w-3xl w-full mx-4 rounded-2xl border-2 border-amber-400/70 shadow-2xl overflow-hidden modal-bg-img">
+            <div class="relative z-10 p-4 sm:p-6">
+                <button id="closeSpinModal" class="absolute top-2 right-3 sm:top-3 sm:right-4 text-white/80 hover:text-amber-300 text-2xl sm:text-3xl z-20">&times;</button>
+
+                <div class="text-center mb-2 sm:mb-3">
+                    <i class="fas fa-gem gold-text text-3xl sm:text-5xl gem-float"></i>
+                    <h3 class="text-xl sm:text-3xl font-black gold-text mt-1 sm:mt-2">SPIN & WIN!</h3>
+                    <p class="text-gray-200 text-xs sm:text-sm">Every spin wins a prize + exclusive promo code for 1xBet</p>
                     <br>
                 </div>
-                <br>
-                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
 
-                    <div class="wheel-canvas-container relative">
-                        <canvas id="prizeWheelCanvas" width="500" height="500"></canvas>
-                        <div class="pointer-arrow"></div>
-                    </div>
-
-                </div>
-                <div class="flex flex-col items-center mt-5 gap-3">
-                    <button id="spinTheWheelBtn" class="gold-btn px-8 py-3 rounded-full text-xl font-black flex items-center gap-2"><i class="fas fa-sync-alt"></i> SPIN NOW</button>
-                    <div id="spinResultMsg" class="text-center text-white font-bold text-base hidden bg-black/60 px-4 py-2 rounded-full border border-amber-400"></div>
-                    <div id="spinPromoBox" class="hidden w-full bg-amber-900/50 rounded-xl p-3 text-center border border-amber-400 backdrop-blur-sm">
-                        <p class="text-amber-300 text-sm font-bold">🎉 YOU WON <span id="winAmountSpan" class="gold-text text-2xl font-black"></span> 🎉</p>
-                        <p class="text-white text-xs">Use promo code: <code id="finalPromoCode" class="bg-black px-2 py-1 rounded font-mono text-amber-300 font-bold"></code></p>
-                        <button id="claimPrizeRedirect" class="gold-btn w-full mt-3 py-2 rounded-lg font-black">CLAIM BONUS</button>
+                <!-- Centered wheel - responsive sizing -->
+                <div class="flex justify-center items-center my-2 sm:my-4">
+                    <div class="wheel-canvas-container relative" style="width: 220px; height: 220px;">
+                        <canvas id="prizeWheelCanvas" width="500" height="500" style="width: 100% !important; height: 100% !important;"></canvas>
+                        <div class="pointer-arrow" style="top: -22px; border-top-width: 45px;"></div>
                     </div>
                 </div>
-                <p class="text-gray-300 text-center text-xs mt-3">*Viking warrior guards your fortune — spin for epic rewards!</p>
+
+                <div class="flex flex-col items-center mt-3 sm:mt-5 gap-2 sm:gap-3">
+                    <button id="spinTheWheelBtn" class="gold-btn px-5 py-2 sm:px-8 sm:py-3 rounded-full text-base sm:text-xl font-black flex items-center gap-2">
+                    <i class="fas fa-sync-alt text-sm sm:text-base"></i> SPIN NOW
+                </button>
+                    <div id="spinResultMsg" class="text-center text-white font-bold text-xs sm:text-base hidden bg-black/60 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-amber-400"></div>
+                    <div id="spinPromoBox" class="hidden w-full bg-amber-900/50 rounded-lg sm:rounded-xl p-2 sm:p-3 text-center border border-amber-400 backdrop-blur-sm">
+                        <p class="text-amber-300 text-xs sm:text-sm font-bold">
+                            🎉 YOU WON <span id="winAmountSpan" class="gold-text text-lg sm:text-2xl font-black"></span> 🎉
+                        </p>
+                        <p class="text-white text-xs mt-1">Use promo code: <code id="finalPromoCode" class="bg-black px-1.5 py-0.5 sm:px-2 sm:py-1 rounded font-mono text-amber-300 font-bold text-xs sm:text-sm"></code></p>
+                        <button id="claimPrizeRedirect" class="gold-btn w-full mt-2 sm:mt-3 py-1.5 sm:py-2 rounded-lg font-black text-sm sm:text-base">CLAIM BONUS</button>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-center text-[10px] sm:text-xs mt-3">*Spin the wheel for epic rewards!</p>
             </div>
         </div>
     </div>
@@ -1836,7 +1919,7 @@
             setTimeout(showModal, 1000);
             setInterval(() => {
                 showModal();
-            }, 40000);
+            }, 80000);
         });
         window.addEventListener('resize', drawWheel);
     </script>
