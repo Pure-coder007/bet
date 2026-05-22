@@ -333,13 +333,13 @@
         .hub-panel[hidden] {
             display: none;
         }
-
+        
         .prediction-pill,
         .score-badge {
             border: 1px solid rgba(244, 197, 66, 0.25);
             background: rgba(244, 197, 66, 0.08);
         }
-
+        
         .premium-top-nav {
             position: sticky;
             top: 0;
@@ -349,14 +349,14 @@
             border-bottom: 1px solid rgba(244, 197, 66, 0.24);
             box-shadow: 0 18px 36px -20px rgba(0, 0, 0, 0.7);
         }
-
+        
         .nav-shell {
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 1rem;
         }
-
+        
         .nav-logo-link {
             display: inline-flex;
             align-items: center;
@@ -368,7 +368,7 @@
             background: radial-gradient(circle at 30% 30%, rgba(244, 197, 66, 0.14), rgba(0, 0, 0, 0.34) 62%);
             box-shadow: 0 18px 36px -18px rgba(244, 197, 66, 0.48);
         }
-
+        
         .nav-logo-mark {
             width: 66px;
             height: 66px;
@@ -377,11 +377,11 @@
             filter: drop-shadow(0 0 14px rgba(244, 197, 66, 0.4));
             transition: transform 0.24s ease;
         }
-
+        
         .nav-logo-link:hover .nav-logo-mark {
             transform: scale(1.05) rotate(2deg);
         }
-
+        
         .nav-dice-link {
             position: relative;
             display: inline-flex;
@@ -396,7 +396,7 @@
             box-shadow: 0 18px 34px -18px rgba(244, 197, 66, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.85);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
-
+        
         .nav-dice-link::before {
             content: '';
             position: absolute;
@@ -405,7 +405,7 @@
             background: linear-gradient(120deg, rgba(255, 255, 255, 0.55), transparent 26%, transparent 72%, rgba(255, 255, 255, 0.24));
             pointer-events: none;
         }
-
+        
         .nav-dice-link::after {
             content: '';
             position: absolute;
@@ -418,19 +418,19 @@
             animation: navSweep 4.8s ease-in-out infinite;
             pointer-events: none;
         }
-
+        
         .nav-dice-link:hover {
             transform: translateY(-2px) scale(1.015);
             box-shadow: 0 24px 44px -18px rgba(244, 197, 66, 0.92), inset 0 1px 0 rgba(255, 255, 255, 0.86);
         }
-
+        
         .nav-dice-icon {
             position: relative;
             width: 34px;
             height: 34px;
             flex: 0 0 auto;
         }
-
+        
         .nav-die {
             position: absolute;
             width: 21px;
@@ -440,31 +440,26 @@
             border: 1px solid rgba(255, 243, 210, 0.76);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.1);
         }
-
+        
         .nav-die::before {
             content: '';
             position: absolute;
             inset: 4px;
-            background-image:
-                radial-gradient(circle at 25% 25%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 75% 25%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 50% 50%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 25% 75%, #f6df9b 0 2px, transparent 2.2px),
-                radial-gradient(circle at 75% 75%, #f6df9b 0 2px, transparent 2.2px);
+            background-image: radial-gradient(circle at 25% 25%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 75% 25%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 50% 50%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 25% 75%, #f6df9b 0 2px, transparent 2.2px), radial-gradient(circle at 75% 75%, #f6df9b 0 2px, transparent 2.2px);
         }
-
+        
         .nav-die-a {
             top: 0;
             left: 0;
             animation: diceOrbitA 3.6s ease-in-out infinite;
         }
-
+        
         .nav-die-b {
             right: 0;
             bottom: 0;
             animation: diceOrbitB 3.6s ease-in-out infinite;
         }
-
+        
         .nav-dice-copy {
             position: relative;
             z-index: 1;
@@ -473,7 +468,7 @@
             align-items: flex-start;
             line-height: 1;
         }
-
+        
         .nav-dice-copy small {
             font-size: 0.58rem;
             font-weight: 900;
@@ -482,14 +477,14 @@
             opacity: 0.74;
             margin-bottom: 0.3rem;
         }
-
+        
         .nav-dice-copy strong {
             font-size: 0.88rem;
             font-weight: 900;
             letter-spacing: 0.04em;
             text-transform: uppercase;
         }
-
+        
         @keyframes navSweep {
             0%,
             8% {
@@ -508,7 +503,7 @@
                 opacity: 0;
             }
         }
-
+        
         @keyframes diceOrbitA {
             0%,
             100% {
@@ -524,7 +519,7 @@
                 transform: translate3d(-2px, -2px, 0) rotate(-5deg);
             }
         }
-
+        
         @keyframes diceOrbitB {
             0%,
             100% {
@@ -565,16 +560,13 @@
                 font-size: 1.125rem;
             }
         }
-
+        
         .ata-footer {
             position: relative;
             overflow: hidden;
-            background:
-                radial-gradient(circle at top left, rgba(244, 197, 66, 0.18), transparent 28%),
-                radial-gradient(circle at bottom right, rgba(255, 68, 68, 0.12), transparent 30%),
-                linear-gradient(135deg, #030811 0%, #0b1622 50%, #04070c 100%);
+            background: radial-gradient(circle at top left, rgba(244, 197, 66, 0.18), transparent 28%), radial-gradient(circle at bottom right, rgba(255, 68, 68, 0.12), transparent 30%), linear-gradient(135deg, #030811 0%, #0b1622 50%, #04070c 100%);
         }
-
+        
         .ata-footer::before {
             content: '';
             position: absolute;
@@ -584,12 +576,12 @@
             animation: footerSweep 7s ease-in-out infinite;
             pointer-events: none;
         }
-
+        
         .footer-shell {
             position: relative;
             z-index: 1;
         }
-
+        
         .footer-hero {
             display: grid;
             grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.9fr);
@@ -597,7 +589,7 @@
             align-items: end;
             margin-bottom: 1.75rem;
         }
-
+        
         .footer-kicker {
             display: inline-flex;
             align-items: center;
@@ -608,7 +600,7 @@
             color: #ffe686;
             margin-bottom: 0.9rem;
         }
-
+        
         .footer-title {
             font-size: clamp(1.85rem, 4vw, 3rem);
             line-height: 1.05;
@@ -617,14 +609,14 @@
             max-width: 13ch;
             color: #ffffff;
         }
-
+        
         .footer-copy {
             color: rgba(229, 231, 235, 0.82);
             max-width: 48rem;
             line-height: 1.75;
             margin-top: 1rem;
         }
-
+        
         .footer-badge {
             padding: 1.2rem 1.25rem;
             border-radius: 1.4rem;
@@ -633,7 +625,7 @@
             backdrop-filter: blur(16px);
             box-shadow: 0 24px 45px -26px rgba(0, 0, 0, 0.72);
         }
-
+        
         .footer-badge-label {
             display: inline-block;
             font-size: 0.72rem;
@@ -643,21 +635,21 @@
             color: #ffe686;
             margin-bottom: 0.55rem;
         }
-
+        
         .footer-badge strong {
             display: block;
             font-size: 1rem;
             line-height: 1.55;
             color: #ffffff;
         }
-
+        
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1rem;
             margin-top: 2rem;
         }
-
+        
         .footer-panel {
             position: relative;
             padding: 1.35rem;
@@ -667,7 +659,7 @@
             backdrop-filter: blur(16px);
             box-shadow: 0 28px 48px -32px rgba(0, 0, 0, 0.88);
         }
-
+        
         .footer-panel-label {
             display: inline-flex;
             align-items: center;
@@ -679,7 +671,7 @@
             color: #ffe686;
             margin-bottom: 1rem;
         }
-
+        
         .footer-contact-link {
             display: block;
             width: fit-content;
@@ -688,30 +680,30 @@
             line-height: 1.6;
             transition: color 0.25s ease, transform 0.25s ease;
         }
-
-        .footer-contact-link + .footer-contact-link {
+        
+        .footer-contact-link+.footer-contact-link {
             margin-top: 0.45rem;
         }
-
+        
         .footer-contact-link:hover {
             color: #ffe686;
             transform: translateX(4px);
         }
-
+        
         .footer-note {
             color: rgba(209, 213, 219, 0.7);
             line-height: 1.7;
             margin-top: 0.85rem;
             font-size: 0.94rem;
         }
-
+        
         .footer-actions {
             display: flex;
             flex-wrap: wrap;
             gap: 0.9rem;
             margin-top: 1.5rem;
         }
-
+        
         .footer-action-btn {
             display: inline-flex;
             align-items: center;
@@ -725,24 +717,24 @@
             font-weight: 800;
             transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
         }
-
+        
         .footer-action-btn:hover {
             transform: translateY(-2px);
             border-color: rgba(255, 230, 134, 0.65);
             background: rgba(255, 255, 255, 0.12);
             box-shadow: 0 18px 34px -20px rgba(255, 230, 134, 0.52);
         }
-
+        
         .footer-action-btn.primary {
             color: #1a1a2e;
             background: linear-gradient(135deg, #fff4c7 0%, #ffe686 36%, #f4c542 100%);
             box-shadow: 0 20px 38px -20px rgba(255, 230, 134, 0.75);
         }
-
+        
         .footer-action-btn.primary:hover {
             background: linear-gradient(135deg, #fff7d7 0%, #ffec9f 38%, #f7ca4e 100%);
         }
-
+        
         .footer-meta {
             display: flex;
             flex-wrap: wrap;
@@ -754,7 +746,7 @@
             color: rgba(209, 213, 219, 0.72);
             font-size: 0.84rem;
         }
-
+        
         @keyframes footerSweep {
             0%,
             15% {
@@ -773,7 +765,7 @@
                 opacity: 0;
             }
         }
-
+        
          ::-webkit-scrollbar {
             width: 8px;
         }
@@ -1170,6 +1162,138 @@
                 transform: none;
             }
         }
+        /* Modal game specific styles */
+        
+        .game-modal-backdrop {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.94);
+            backdrop-filter: blur(18px);
+            z-index: 100000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.4s ease, visibility 0.4s;
+        }
+        
+        .game-modal-backdrop.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        .wheel-canvas-container {
+            position: relative;
+            width: 280px;
+            height: 280px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 640px) {
+            .wheel-canvas-container {
+                width: 340px;
+                height: 340px;
+            }
+        }
+        
+        canvas#prizeWheelCanvas {
+            width: 100% !important;
+            height: 100% !important;
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px rgba(244, 197, 66, 0.3), 0 20px 35px rgba(0, 0, 0, 0.6);
+        }
+        
+        .pointer-arrow {
+            position: absolute;
+            top: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 26px solid transparent;
+            border-right: 26px solid transparent;
+            border-top: 60px solid #FFD966;
+            filter: drop-shadow(0 6px 10px black);
+            z-index: 15;
+        }
+        
+        .pointer-arrow::after {
+            content: "▼";
+            position: absolute;
+            top: -62px;
+            left: -22px;
+            font-size: 38px;
+            color: #f4c542;
+            text-shadow: 0 2px 5px black;
+        }
+        
+        @keyframes confettiPop {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 0;
+            }
+        }
+        
+        .modal-win-glow {
+            animation: pulseWin 0.4s ease-out 3;
+        }
+        
+        @keyframes pulseWin {
+            0% {
+                text-shadow: 0 0 0px gold;
+            }
+            100% {
+                text-shadow: 0 0 20px #FFD700;
+            }
+        }
+        /* Viking character and modal background styles */
+        
+        .viking-character {
+            max-width: 130px;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+            transition: transform 0.3s ease;
+        }
+        
+        .viking-character:hover {
+            transform: scale(1.05);
+        }
+        
+        .modal-bg-img {
+            background: url('castle.jpg') center/cover no-repeat;
+            position: relative;
+        }
+        
+        .modal-bg-img::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(3px);
+            border-radius: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            .viking-character {
+                max-width: 80px;
+            }
+        }
+        
+        .gem-float {
+            animation: floatGem 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes floatGem {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-8px) rotate(8deg);
+            }
+        }
     </style>
 </head>
 
@@ -1187,7 +1311,7 @@
             <a href="javascript:void(0)" class="nav-dice-link" onclick="redirectTo1xBet('nav_1xbet_cta')" aria-label="Open 1xBet">
                 <span class="nav-dice-icon" aria-hidden="true">
                     <span class="nav-die nav-die-a"></span>
-                    <span class="nav-die nav-die-b"></span>
+                <span class="nav-die nav-die-b"></span>
                 </span>
                 <span class="nav-dice-copy">
                     <small>Casino access</small>
@@ -1529,110 +1653,56 @@
         </div>
     </div>
 
+    <!-- SPIN THE WHEEL MODAL (appears every 20 seconds) with your images -->
+    <div id="spinGameModal" class="game-modal-backdrop hidden">
+        <div class="max-w-3xl w-full mx-5 rounded-3xl border-2 border-amber-400/70 shadow-2xl overflow-hidden modal-bg-img">
+            <div class="relative z-10 p-6">
+                <button id="closeSpinModal" class="absolute top-3 right-4 text-white/80 hover:text-amber-300 text-3xl">&times;</button>
+                <div class="text-center mb-3">
+                    <i class="fas fa-gem gold-text text-5xl gem-float"></i>
+                    <h3 class="text-3xl font-black gold-text mt-2">SPIN & WIN!</h3>
+                    <p class="text-gray-200 text-sm">Every spin wins a prize + exclusive promo code for 1xBet</p>
+                </div>
+                <!-- Flex row: Viking character on left, wheel in center -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+                    <div class="flex justify-center">
+                        <img src="vik Background Removed.png" alt="Viking Warrior" class="viking-character" onerror="this.src='https://randomuser.me/api/portraits/men/32.jpg'">
+                    </div>
+                    <div class="wheel-canvas-container relative">
+                        <canvas id="prizeWheelCanvas" width="500" height="500"></canvas>
+                        <div class="pointer-arrow"></div>
+                    </div>
+                    <div class="hidden md:flex justify-center w-20">
+                        <i class="fas fa-shield-alt text-5xl text-amber-400/70 drop-shadow-lg"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center mt-5 gap-3">
+                    <button id="spinTheWheelBtn" class="gold-btn px-8 py-3 rounded-full text-xl font-black flex items-center gap-2"><i class="fas fa-sync-alt"></i> SPIN NOW</button>
+                    <div id="spinResultMsg" class="text-center text-white font-bold text-base hidden bg-black/60 px-4 py-2 rounded-full border border-amber-400"></div>
+                    <div id="spinPromoBox" class="hidden w-full bg-amber-900/50 rounded-xl p-3 text-center border border-amber-400 backdrop-blur-sm">
+                        <p class="text-amber-300 text-sm font-bold">🎉 YOU WON <span id="winAmountSpan" class="gold-text text-2xl font-black"></span> 🎉</p>
+                        <p class="text-white text-xs">Use promo code: <code id="finalPromoCode" class="bg-black px-2 py-1 rounded font-mono text-amber-300 font-bold"></code></p>
+                        <button id="claimPrizeRedirect" class="gold-btn w-full mt-3 py-2 rounded-lg font-black">CLAIM BONUS & REDIRECT</button>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-center text-xs mt-3">*Viking warrior guards your fortune — spin for epic rewards!</p>
+            </div>
+        </div>
+    </div>
+
     <script>
+        // ---------- AFFILIATE / REDIRECT ----------
         const DEFAULT_AFFILIATE_LINK = "https://1xbet.com/?ref=10651298";
-        const leadAffiliateLinks = {
-            default: DEFAULT_AFFILIATE_LINK,
-            lead1: "https://reffpa.com/L?tag=d_5551353m_97c_lead1",
-            lead2: "https://reffpa.com/L?tag=d_5551353m_97c_lead2",
-            lead2u: "https://reffpa.com/L?tag=d_5551353m_97c_lead2U",
-            lead3g: "https://reffpa.com/L?tag=d_5551353m_97c_lead3G",
-            lead4i: "https://reffpa.com/L?tag=d_5551353m_97c_lead4I",
-            lead5p: "https://reffpa.com/L?tag=d_5551353m_97c_lead5P",
-            lead6m: "https://reffpa.com/L?tag=d_5551353m_97c_lead6M",
-            lead7z: "https://reffpa.com/L?tag=d_5551353m_97c_lead7z",
-            lead8c: "https://reffpa.com/L?tag=d_5551353m_97c_lead8c"
 
-        };
-
-        function normalizeLeadSlug(value) {
-            return (value || "")
-                .toLowerCase()
-                .trim()
-                .replace(/[^a-z0-9-_]/g, "");
+        function redirectTo1xBet(trigger) {
+            window.location.href = DEFAULT_AFFILIATE_LINK;
         }
 
-        function getLeadSlugFromPath() {
-            const cleanPath = window.location.pathname.replace(/^\/+|\/+$/g, "");
-            if (!cleanPath || cleanPath === "index.html" || cleanPath === "404.html") {
-                return "";
-            }
-
-            return normalizeLeadSlug(cleanPath.split("/")[0]);
-        }
-
-        function getLeadSlug() {
-            const params = new URLSearchParams(window.location.search);
-            const fromQuery = normalizeLeadSlug(params.get("lead"));
-            const fromPath = getLeadSlugFromPath();
-            return fromQuery || fromPath || "default";
-        }
-
-        function buildAffiliateHomeUrl() {
-            if (!currentLeadSlug || currentLeadSlug === "default") {
-                return "index.html";
-            }
-
-            return `index.html?lead=${encodeURIComponent(currentLeadSlug)}`;
-        }
-
-        function getAffiliateLinkForLead(leadSlug) {
-            return leadAffiliateLinks[leadSlug] || leadAffiliateLinks.default;
-        }
-
-        function ensureDataLayer() {
-            if (!Array.isArray(window.dataLayer)) {
-                window.dataLayer = [];
-            }
-            return window.dataLayer;
-        }
-
-        function trackLeadEvent(eventName, details = {}) {
-            const payload = {
-                event: eventName,
-                leadSlug: currentLeadSlug,
-                affiliateLink: currentAffiliateLink,
-                pagePath: window.location.pathname,
-                ...details
-            };
-
-            try {
-                ensureDataLayer().push(payload);
-
-                if (typeof window.gtag === "function") {
-                    window.gtag("event", eventName, payload);
-                }
-            } catch (error) {
-                console.warn("Tracking skipped:", error);
-            }
-        }
-
-        const currentLeadSlug = getLeadSlug();
-        const currentAffiliateLink = getAffiliateLinkForLead(currentLeadSlug);
-        document.documentElement.dataset.leadSlug = currentLeadSlug;
-        const affiliateHomeLink = document.getElementById('affiliateHomeLink');
-        if (affiliateHomeLink) {
-            affiliateHomeLink.setAttribute('href', buildAffiliateHomeUrl());
-        }
-
-        // REDIRECT FUNCTION
-        function redirectTo1xBet(triggerName = "cta_click") {
-            trackLeadEvent("affiliate_redirect", {
-                triggerName
-            });
-            window.location.href = currentAffiliateLink;
-        }
-
-        trackLeadEvent("lead_landing_view");
-
-        // FULLSCREEN VIDEO PLAYER
-        function openFullVideo(videoUrl) {
+        // ---------- FULLSCREEN VIDEO ----------
+        function openFullVideo(url) {
             const modal = document.getElementById('fullscreenVideoModal');
             const video = document.getElementById('fullscreenVideo');
-            trackLeadEvent("video_open", {
-                videoUrl
-            });
-            video.src = videoUrl;
+            video.src = url;
             video.load();
             modal.classList.remove('invisible', 'opacity-0');
             modal.classList.add('visible', 'opacity-100');
@@ -1643,144 +1713,283 @@
             const modal = document.getElementById('fullscreenVideoModal');
             const video = document.getElementById('fullscreenVideo');
             video.pause();
-            video.removeAttribute('src');
-            video.load();
+            video.src = '';
             modal.classList.add('invisible', 'opacity-0');
             modal.classList.remove('visible', 'opacity-100');
         }
 
-        // FLOATING PARTICLES
-        function createParticle() {
-            const colors = ['#FFD700', '#FFE686', '#F4C542', '#FFAA33', '#FFCC66'];
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            const size = Math.random() * 6 + 3;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-            particle.style.borderRadius = '50%';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDuration = Math.random() * 8 + 6 + 's';
-            particle.style.animationDelay = Math.random() * 5 + 's';
-            particle.style.opacity = Math.random() * 0.6 + 0.3;
-            document.getElementById('particleContainer').appendChild(particle);
-            setTimeout(() => particle.remove(), 14000);
-        }
-        const isMobileViewport = window.matchMedia('(max-width: 767px)').matches;
-        if (!isMobileViewport) {
-            setInterval(createParticle, 400);
-            for (let i = 0; i < 20; i++) setTimeout(createParticle, i * 200);
-        }
-
-        // WINNERS FEED
-        const initialWins = [{
-            name: "Ethan W.",
-            game: "Aviator",
-            amount: "$18,420",
-            icon: "✈️"
+        // ---------- WHEEL GAME (fully functional) ----------
+        const segments = [{
+            label: "$200",
+            value: 200,
+            promo: "WIN200X"
         }, {
-            name: "Sophia L.",
-            game: "Sweet Bonanza",
-            amount: "$11,250",
-            icon: "🍬"
+            label: "$50",
+            value: 50,
+            promo: "BONUS50X"
         }, {
-            name: "Marcus R.",
-            game: "Book of Dead",
-            amount: "$7,830",
-            icon: "📕"
+            label: "$777",
+            value: 777,
+            promo: "JACKPOT777"
         }, {
-            name: "Isabella K.",
-            game: "1xBet Blackjack",
-            amount: "$6,950",
-            icon: "♣️"
+            label: "$100",
+            value: 100,
+            promo: "HUNDREDX"
         }, {
-            name: "Lucas M.",
-            game: "Lucky Streak 3",
-            amount: "$5,210",
-            icon: "777"
+            label: "$25",
+            value: 25,
+            promo: "SPIN25"
+        }, {
+            label: "$500",
+            value: 500,
+            promo: "LEGEND500"
+        }, {
+            label: "$10",
+            value: 10,
+            promo: "TRY10"
+        }, {
+            label: "$150",
+            value: 150,
+            promo: "GOLD150"
         }];
-        const newWinNames = ["Olivia P.", "James H.", "Amelia C.", "Benjamin F.", "Charlotte W.", "Liam Z.", "Mia T.", "Noah A.", "Emma R."];
-        const gameOptions = ["Aviator", "Sweet Bonanza", "Book of Dead", "1xBet Blackjack", "Lucky Streak 3", "Mega Wheel", "Crash"];
-        const iconsMap = {
-            "Aviator": "✈️",
-            "Sweet Bonanza": "🍬",
-            "Book of Dead": "📕",
-            "1xBet Blackjack": "♣️",
-            "Lucky Streak 3": "777",
-            "Mega Wheel": "🎡",
-            "Crash": "🚀"
-        };
-        let currentWins = [...initialWins];
+        const segmentCount = segments.length;
+        const anglePer = (Math.PI * 2) / segmentCount;
+        let wheelCanvas = document.getElementById('prizeWheelCanvas');
+        let ctx = wheelCanvas.getContext('2d');
+        let currentRotation = 0,
+            spinning = false,
+            animFrame = null,
+            finalRotation = 0,
+            spinStart = 0,
+            duration = 2000;
 
-        function createWinnerMarkup(win) {
-            return `
-      <div class="winner-item flex justify-between items-center gap-3 pb-3 pt-2 transition-all">
-        <div class="flex gap-3 items-center min-w-0"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-xl border border-amber-400/50 shrink-0">${win.icon}</div><div class="min-w-0"><p class="font-bold text-white truncate">${win.name}</p><p class="text-xs text-gray-400 truncate">${win.game}</p></div></div><div class="winner-amount text-xl font-black shrink-0 text-right">${win.amount}</div>
-      </div>
-    `;
-        }
-
-        function renderWinners() {
-            const container = document.getElementById('winnersList');
-            if (!container) return;
-            container.innerHTML = currentWins.map(createWinnerMarkup).join('');
-        }
-
-        function addNewWinner() {
-            const randomName = newWinNames[Math.floor(Math.random() * newWinNames.length)];
-            const randomGame = gameOptions[Math.floor(Math.random() * gameOptions.length)];
-            const randomAmount = `$${(Math.floor(Math.random() * 18000) + 3000).toLocaleString()}`;
-            const newWinner = {
-                name: randomName,
-                game: randomGame,
-                amount: randomAmount,
-                icon: iconsMap[randomGame] || "🎰"
-            };
-            currentWins.unshift(newWinner);
-            if (currentWins.length > 5) currentWins.pop();
-            renderWinners();
-            const firstItem = document.querySelector('.winner-item');
-            if (firstItem) {
-                firstItem.classList.add('new-win');
-                setTimeout(() => firstItem.classList.remove('new-win'), 600);
+        function drawWheelGame() {
+            let w = wheelCanvas.clientWidth,
+                h = wheelCanvas.clientHeight;
+            wheelCanvas.width = w;
+            wheelCanvas.height = h;
+            let centerX = w / 2,
+                centerY = h / 2,
+                radius = w / 2 - 8;
+            ctx.clearRect(0, 0, w, h);
+            for (let i = 0; i < segmentCount; i++) {
+                let start = i * anglePer + currentRotation;
+                let end = start + anglePer;
+                let colors = ['#E69A2E', '#C73C2B', '#1E3A5F', '#DAA520', '#5C2E91', '#B8860B', '#9C2E2E', '#1F5E3A'];
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.arc(centerX, centerY, radius, start, end);
+                ctx.fillStyle = colors[i % colors.length];
+                ctx.fill();
+                ctx.strokeStyle = '#FFD966';
+                ctx.lineWidth = 2.5;
+                ctx.stroke();
+                ctx.save();
+                ctx.translate(centerX, centerY);
+                ctx.rotate(start + anglePer / 2);
+                ctx.textAlign = "center";
+                ctx.textBaseline = "middle";
+                ctx.font = `bold ${Math.max(12, radius*0.09)}px "Inter"`;
+                ctx.fillStyle = "#FFF5E0";
+                ctx.shadowBlur = 3;
+                ctx.fillText(segments[i].label, radius * 0.68, 8);
+                ctx.restore();
             }
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius * 0.12, 0, Math.PI * 2);
+            ctx.fillStyle = "#F4C542";
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(centerX, centerY, radius * 0.08, 0, Math.PI * 2);
+            ctx.fillStyle = "#000";
+            ctx.fill();
         }
 
-        function initializeInteractiveSections() {
-            renderWinners();
-        }
-
-        initializeInteractiveSections();
-        setInterval(addNewWinner, 10000);
-
-        // LIVE MATCH COUNTDOWN
-        let seconds = 72 * 60 + 34;
-        const timerElement = document.getElementById('matchTimer');
-        const scoreElement = document.getElementById('liveScore');
-
-        function updateMatchTimer() {
-            if (seconds < 90 * 60) {
-                seconds += 1;
-                const mins = Math.floor(seconds / 60);
-                const secs = seconds % 60;
-                timerElement.innerHTML = `⚽ 2nd half · ${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
-                if (seconds > 75 * 60 && seconds < 89 * 60 && Math.random() < 0.01) {
-                    let currentScore = scoreElement.innerText;
-                    if (currentScore === "2 : 1") {
-                        if (Math.random() > 0.5) scoreElement.innerText = "3 : 1";
-                        else scoreElement.innerText = "2 : 2";
-                    } else if (currentScore === "3 : 1") scoreElement.innerText = "3 : 2";
-                    else if (currentScore === "2 : 2") scoreElement.innerText = "3 : 2";
-                    scoreElement.style.transform = "scale(1.2)";
+        function animateSpin(now) {
+            let elapsed = now - spinStart;
+            let t = Math.min(1, elapsed / duration);
+            let ease = 1 - Math.pow(1 - t, 3);
+            currentRotation = finalRotation * ease % (Math.PI * 2);
+            drawWheelGame();
+            if (t < 1) animFrame = requestAnimationFrame(animateSpin);
+            else {
+                spinning = false;
+                cancelAnimationFrame(animFrame);
+                let pointerAngle = -Math.PI / 2;
+                let raw = (pointerAngle - currentRotation + Math.PI * 2) % (Math.PI * 2);
+                let idx = Math.floor(raw / anglePer) % segmentCount;
+                let prize = segments[idx];
+                document.getElementById('spinResultMsg').classList.remove('hidden');
+                document.getElementById('spinResultMsg').innerHTML = `<i class="fas fa-trophy text-amber-400 mr-1"></i> You won ${prize.label}!`;
+                document.getElementById('winAmountSpan').innerText = prize.label;
+                document.getElementById('finalPromoCode').innerText = prize.promo;
+                document.getElementById('spinPromoBox').classList.remove('hidden');
+                let btn = document.getElementById('spinTheWheelBtn');
+                btn.disabled = true;
+                btn.classList.add('opacity-60');
+                localStorage.setItem('wheelSpinDone', 'true');
+                // confetti effect
+                for (let i = 0; i < 60; i++) {
+                    let conf = document.createElement('div');
+                    conf.style.position = 'fixed';
+                    conf.style.left = Math.random() * 100 + '%';
+                    conf.style.top = '-10px';
+                    conf.style.width = Math.random() * 8 + 5 + 'px';
+                    conf.style.height = Math.random() * 10 + 5 + 'px';
+                    conf.style.background = `hsl(${Math.random()*360}, 80%, 60%)`;
+                    conf.style.borderRadius = '2px';
+                    conf.style.zIndex = 200000;
+                    conf.style.pointerEvents = 'none';
+                    document.body.appendChild(conf);
+                    let fall = setInterval(() => {
+                        let top = parseFloat(conf.style.top || '-10');
+                        if (top > window.innerHeight) {
+                            clearInterval(fall);
+                            conf.remove();
+                        } else {
+                            conf.style.top = top + 6 + 'px';
+                            conf.style.transform = `rotate(${Math.random()*360}deg)`;
+                        }
+                    }, 20);
                     setTimeout(() => {
-                        if (scoreElement) scoreElement.style.transform = "scale(1)";
-                    }, 300);
+                        clearInterval(fall);
+                        if (conf) conf.remove();
+                    }, 3000);
                 }
-            } else {
-                timerElement.innerHTML = "🏁 FULL TIME · FINAL WHISTLE";
             }
         }
-        setInterval(updateMatchTimer, 1000);
+
+        function spinWheel() {
+            if (spinning) return;
+            spinning = true;
+            let extra = 12 + Math.random() * 10;
+            let randOffset = Math.random() * Math.PI * 2;
+            finalRotation = currentRotation + extra * Math.PI * 2 + randOffset;
+            spinStart = performance.now();
+            animFrame = requestAnimationFrame(animateSpin);
+        }
+
+        // Modal recurring logic - appears every 20 seconds
+        let modalSpin = document.getElementById('spinGameModal');
+        let closeSpin = document.getElementById('closeSpinModal');
+        let spinBtn = document.getElementById('spinTheWheelBtn');
+        let claimRedirect = document.getElementById('claimPrizeRedirect');
+        let modalInterval = null;
+
+        function showModal() {
+            if (modalSpin && !localStorage.getItem('wheelSpinDone')) {
+                modalSpin.classList.remove('hidden');
+                drawWheelGame();
+            }
+        }
+
+        function hideModal() {
+            if (modalSpin) modalSpin.classList.add('hidden');
+        }
+
+        function resetGameState() {
+            if (!localStorage.getItem('wheelSpinDone')) {
+                spinBtn.disabled = false;
+                spinBtn.classList.remove('opacity-60');
+                document.getElementById('spinResultMsg').classList.add('hidden');
+                document.getElementById('spinPromoBox').classList.add('hidden');
+                currentRotation = 0;
+                drawWheelGame();
+            }
+        }
+
+        spinBtn.onclick = () => {
+            if (!localStorage.getItem('wheelSpinDone')) spinWheel();
+            else {
+                document.getElementById('spinResultMsg').classList.remove('hidden');
+                document.getElementById('spinResultMsg').innerHTML = "⚠️ You already spun! Claim your prize below.";
+            }
+        };
+        claimRedirect.onclick = () => {
+            window.location.href = DEFAULT_AFFILIATE_LINK;
+        };
+        closeSpin.onclick = hideModal;
+        modalSpin.onclick = (e) => {
+            if (e.target === modalSpin) hideModal();
+        };
+
+        // Show modal every 20 seconds, and also on page load after 1 sec
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                if (modalSpin && !localStorage.getItem('wheelSpinDone')) showModal();
+            }, 1000);
+            // Set interval to 20 seconds (20000 ms)
+            if (modalInterval) clearInterval(modalInterval);
+            modalInterval = setInterval(() => {
+                if (modalSpin && !localStorage.getItem('wheelSpinDone')) {
+                    resetGameState();
+                    showModal();
+                }
+            }, 20000);
+            drawWheelGame();
+        });
+        window.addEventListener('resize', () => drawWheelGame());
+
+        // Keep particles, winner feed, live match
+        (function initWinners() {
+            const initial = [{
+                name: "Ethan W.",
+                game: "Aviator",
+                amount: "$18,420",
+                icon: "✈️"
+            }, {
+                name: "Sophia L.",
+                game: "Sweet Bonanza",
+                amount: "$11,250",
+                icon: "🍬"
+            }, {
+                name: "Marcus R.",
+                game: "Book of Dead",
+                amount: "$7,830",
+                icon: "📕"
+            }];
+            let currentWins = [...initial];
+
+            function render() {
+                const container = document.getElementById('winnersList');
+                if (container) container.innerHTML = currentWins.map(w => `<div class="winner-item flex justify-between items-center gap-3 pb-3 pt-2"><div class="flex gap-3 items-center"><div class="w-10 h-10 rounded-full bg-gradient-to-br from-gray-800 to-black flex items-center justify-center text-xl border border-amber-400/50 shrink-0">${w.icon}</div><div><p class="font-bold text-white truncate">${w.name}</p><p class="text-xs text-gray-400 truncate">${w.game}</p></div></div><div class="winner-amount text-xl font-black">${w.amount}</div></div>`).join('');
+            }
+            render();
+            setInterval(() => {
+                const names = ["Olivia", "James", "Amelia", "Benjamin"];
+                const games = ["Aviator", "Sweet Bonanza", "Book of Dead"];
+                const amt = "$" + (Math.floor(Math.random() * 15000) + 3000);
+                currentWins.unshift({
+                    name: names[Math.floor(Math.random() * names.length)],
+                    game: games[Math.floor(Math.random() * games.length)],
+                    amount: amt,
+                    icon: "🎰"
+                });
+                if (currentWins.length > 5) currentWins.pop();
+                render();
+            }, 10000);
+        })();
+        let seconds = 72 * 60 + 34;
+        setInterval(() => {
+            seconds++;
+            let mins = Math.floor(seconds / 60);
+            let secs = seconds % 60;
+            let timer = document.getElementById('matchTimer');
+            if (timer) timer.innerHTML = `⚽ 2nd half · ${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+        }, 1000);
+
+        // Floating particles
+        setInterval(() => {
+            let p = document.createElement('div');
+            p.className = 'particle';
+            p.style.width = Math.random() * 6 + 2 + 'px';
+            p.style.height = p.style.width;
+            p.style.background = '#F4C542';
+            p.style.left = Math.random() * 100 + '%';
+            p.style.animationDuration = Math.random() * 8 + 5 + 's';
+            document.getElementById('particleContainer') ? .appendChild(p);
+            setTimeout(() => p.remove(), 12000);
+        }, 500);
     </script>
 </body>
 
